@@ -10,7 +10,7 @@ Read **https://webspaces.space/llms.txt** before making changes. It's the comple
 - **Place everything with an explicit transform**: `style="transform: translate3d(Xcm, Ycm, Zcm) ..."`. Units are
   centimeters, y is up, and the default view looks toward −z. Objects without a transform spawn in front of each
   visitor separately, so don't rely on that.
-- **Ground height varies** on `hills`, `plains`, and `islands` terrain (often 1–2 m above y = 0 near spawn). Use
+- **Ground height**: on `flat` terrain the ground is at y = 75 cm; on `hills`, `plains`, and `islands` it varies (often 75–200 cm near spawn). Use
   `flat` terrain when you need predictable heights, or place things ~150 cm above where you expect the ground.
 - **Give objects readable ids** (`id="lantern-3"`) so scripts can find them with `getElementById`.
 - **Scripts go in `<script type="module">`** and start with `await webspace.ready;`. Change the world by changing
