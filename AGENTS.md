@@ -18,6 +18,9 @@ Read **https://webspaces.space/llms.txt** before making changes. It's the comple
   `pointerleave` listeners. Use `webspace.state` (shared, last-writer-wins) for anything visitors cause, so
   everyone sees the same thing. Time-based motion from `Date.now()` is already in sync for everyone.
 - **Script changes are never saved into the file**, so it's safe to animate every frame.
+- **SVOX facts**: voxels are 12.5cm regardless of the file's `scale`; models are centered on their transform (raise
+  them by half their height to sit on the ground); thin parts need 2+ voxels and a `deform = 1` material. Ready-made
+  CC0 models: https://webspaces.space/kit/
 - **Models**: `.svox` (Smooth Voxels, plain text, the house style), `.glb`, and Gaussian splats (`.spz`, `.ply`,
   `.splat`). Keep assets in folders next to the HTML and use relative paths.
 - **Keep `webspace.service.1.0.1.js`** next to every world's HTML. It's required when hosted.

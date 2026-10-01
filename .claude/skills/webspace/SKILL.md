@@ -26,7 +26,10 @@ objects placed with CSS transforms, and an optional `<script type="module">` bri
    - Emoji objects: `<div style="font-family: emoji; transform: ...">🌸</div>`.
    - Models: write small `.svox` files (Smooth Voxels: lines are z slices, space-separated groups are y layers
      bottom→top, characters are x voxels; letters map to material colors; `-` is empty). Keep them under ~20³
-     and let `deform`/`lighting = smooth` do the shaping.
+     and let `deform`/`lighting = smooth` do the shaping. Each voxel is 12.5cm whatever `scale` says (resize with
+     `scale3d`), and models are centered on their transform, so raise them by half their height to stand on the
+     ground. Make thin parts 2+ voxels thick with a `deform = 1` material. Ready-made CC0 models:
+     https://webspaces.space/kit/
    - Real captures: `<model src="scan.spz">`; flip y-down captures with `rotateX(3.14159rad)`.
    - Glowing light: splats with `style="mix-blend-mode: plus-lighter"`.
 4. **Behavior.** In a module script: `await webspace.ready;` then use DOM changes + events. Anything a visitor
